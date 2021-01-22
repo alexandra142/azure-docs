@@ -172,8 +172,6 @@ requestMessage.Headers.Add("x-ms-content-sha256", contentHash);
 requestMessage.Headers.Add("Date", date);
 //add Authorization header
 requestMessage.Headers.Add("Authorization", authorizationHeader);
-//add host header
-requestMessage.Headers.Add("Host", requestMessage.RequestUri.Authority);
 ```
 
 ## Test the client
@@ -187,5 +185,3 @@ var responseString = await response.Content.ReadAsStringAsync();
 
 Console.WriteLine(responseString);
 ```
-
-
